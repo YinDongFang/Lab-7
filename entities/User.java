@@ -16,13 +16,16 @@ public class User {
     private int id;
     private String firstName;
     private String lastName;
+    private int totalLike;
     private List<Comment> comments;
+    private List<Post> posts;
 
     public User(int id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.comments = new ArrayList<>();
+        this.posts = new ArrayList<>();
     }
 
     public String getFirstName() {
@@ -49,12 +52,28 @@ public class User {
         this.id = id;
     }
 
+    public int getTotalLike() {
+        return totalLike;
+    }
+
+    public void setTotalLike(int totalLike) {
+        this.totalLike = totalLike;
+    }
+
     public List<Comment> getComments() {
         return comments;
     }
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
     @Override

@@ -16,6 +16,7 @@ public class Post {
     
     private int postId;
     private int userId;
+    private int totalLike;
     private List<Comment> comments;
 
     public Post(int postId, int userId) {
@@ -30,6 +31,14 @@ public class Post {
 
     public int getUserId() {
         return userId;
+    }
+
+    public int getTotalLike() {
+        return totalLike;
+    }
+
+    public void setTotalLike(int totalLike) {
+        this.totalLike = totalLike;
     }
 
     public List<Comment> getComments() {
